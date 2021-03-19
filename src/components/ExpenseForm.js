@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Error from "./Error";
 import shortid from "shortid";
+import PropTypes from "prop-types";
 
 //this component shows after the user submit a budget amount and ask for the expenses object data
 const ExpenseForm = ({ saveExpense, saveCheckExpense }) => {
@@ -75,6 +76,11 @@ const ExpenseForm = ({ saveExpense, saveCheckExpense }) => {
       />
     </form>
   );
+};
+
+ExpenseForm.propTypes = {
+  saveExpense: PropTypes.func.isRequired,
+  saveCheckExpense: PropTypes.func.isRequired,
 };
 
 export default ExpenseForm;

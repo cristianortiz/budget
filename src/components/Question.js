@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import Error from "./Error";
+import PropTypes from "prop-types";
 
 const Question = ({ saveBudget, saveRemain, updateQuestion }) => {
   //local useState hook to keep tracking of the input field in the Question form of the budget, 0 is the default value
@@ -56,8 +57,10 @@ const Question = ({ saveBudget, saveRemain, updateQuestion }) => {
     </Fragment>
   );
 };
+Question.propTypes = {
+  saveBudget: PropTypes.func.isRequired,
+  saveRemain: PropTypes.func.isRequired,
+  updateQuestion: PropTypes.func.isRequired,
+};
 
 export default Question;
-<Fragment>
-  <h2>Your Total Budget</h2>
-</Fragment>;
